@@ -139,6 +139,15 @@
 
     // 		$(".header").css({top:0+'px'})
     // 	}})
+	$.ajax({
+		url: 'http://caifu688.vip/test.php',
+		type: 'get',
+		dataType: 'jsonp',
+		jsonp: 'jsoncallback'
+	})
+	.done(function(msg) {
+		console.log(msg)
+	})
     </script>
 </head>
 
