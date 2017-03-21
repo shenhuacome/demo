@@ -20,8 +20,7 @@ gulp.task('fileinclude', function() {
 
 
 gulp.task('css', function() {
-    return gulp.src(cssPath).pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))    
-        .pipe(gulp.dest('./dist/css'))   //输出文件夹
+    return gulp.src(cssPath).pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError)).pipe(gulp.dest('./dist/css'))   //输出文件夹
 });
 
 gulp.task('image', function() {
@@ -54,7 +53,7 @@ gulp.task('html', function () {
  // 监听html
 
  gulp.task('watchhtml',function(){
- 	return gulp.watch('src/htmls/**.*', function(){
+ 	return gulp.watch('src/htmls/**/*.*', function(){
  		 	
             gulp.run('fileinclude');
             gulp.run('html');

@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html >
 <head>
-	@@include('include/meta.html')
-	<title>Document</title>
-	@@include('include/css.html')
-	@@include('include/js.html')
+
+	@@include('include/head.html',{"title":"首页"})
+	
 </head>
 <body>
-  @@include('include/head.html')
-  	<div>hello 神奇厉害了dd</div>
-	<img src="images/test.png" style="width:200px" />
-   @@include('include/foot.html')	
+  @@include('include/top.html')
+  @@include('include/menu.html',{"active":4})
+  <div>hello 神奇厉害了dd</div>
+  <img src="images/test.png" style="width:200px" />
+  @@include('include/bottom.html')	
+  @@include('include/js.html')
    <script type="text/javascript" src="js/common.js"></script>
 </body>
 </html>

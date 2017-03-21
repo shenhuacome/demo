@@ -1,18 +1,14 @@
 <!DOCTYPE html>
 <html >
 <head>
-	
-	@@include('include/meta.html')
-	<title>inner</title>
-	
-	@@include('include/css.html')
-	@@include('include/js.html')
+	@@include('include/head.html',{"title":"内页"})
 </head>
 <body>
-  @@include('include/head.html')
-
-    <p> 这是 inner的ww内容 </p>
-
-    @@include('include/foot.html')	
+  @@include('include/top.html')
+  @@include('include/menu.html',{"active":4})
+  <div>hello 内页 神奇厉害了dd</div>
+  @@include('include/bottom.html')	
+  @@include('include/js.html')
+   <script type="text/javascript" src="js/common.js"></script>
 </body>
 </html>
